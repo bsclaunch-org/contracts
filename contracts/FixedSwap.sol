@@ -14,6 +14,7 @@ contract Whitelist is Ownable {
     address[] public whitelistedAddresses;
     bool public hasWhitelisting = false;
     uint256 private constant _TIMELOCK = 1 days;
+    mapping(Functions => uint256) public timelock;
 
     event AddedToWhitelist(address[] indexed accounts);
     event RemovedFromWhitelist(address indexed account);
@@ -66,7 +67,6 @@ contract FixedSwap is Pausable, Whitelist {
     ERC20 public erc20;
     bool public isSaleFunded = false;
     uint256 public decimals = 0;
-    uint256 public timelock = 0;
     bool public unsoldTokensReedemed = false;
     uint256 public tradeValue; /* Price in Wei */
     uint256 public startDate; /* Start Date  */
@@ -106,8 +106,7 @@ contract FixedSwap is Pausable, Whitelist {
         bool _isTokenSwapAtomic,
         uint256 _minimumRaise,
         uint256 _feeAmount,
-        bool _hasWhitelisting,
-        uint256 _timelock
+        bool _hasWhitelisting
     ) Whitelist(_hasWhitelisting) {
         /* Confirmations */
         require(
@@ -151,7 +150,6 @@ contract FixedSwap is Pausable, Whitelist {
         erc20 = ERC20(_tokenAddress);
         decimals = erc20.decimals();
         feePercentage = _feeAmount;
-        timelock = _timelock;
     }
 
     /**
@@ -161,13 +159,7 @@ contract FixedSwap is Pausable, Whitelist {
         require(!isTokenSwapAtomic, "Has to be non Atomic swap");
         _;
     }
-    modifier notLocked() {
-        require(
-            timelock != 0 && timelock <= block.timestamp,
-            "Function is timelocked"
-        );
-        _;
-    }
+
     /**
      * Modifier to make a function callable only when the contract has Atomic Swaps not available.
      */
@@ -408,7 +400,6 @@ contract FixedSwap is Pausable, Whitelist {
         isNotAtomicSwap
         isSaleFinalized
         whenNotPaused
-        notLocked
     {
         /* Confirm it exists and was not finalized */
         require(
@@ -429,7 +420,6 @@ contract FixedSwap is Pausable, Whitelist {
         external
         isSaleFinalized
         isNotAtomicSwap
-        notLocked
     {
         require(hasMinimumRaise(), "Minimum raise has to exist");
         require(minimumRaiseNotAchieved(), "Minimum raise has to be reached");
@@ -446,13 +436,7 @@ contract FixedSwap is Pausable, Whitelist {
     }
 
     /* Admin Functions */
-    function withdrawFunds()
-        external
-        onlyOwner
-        whenNotPaused
-        isSaleFinalized
-        notLocked
-    {
+    function withdrawFunds() external onlyOwner whenNotPaused isSaleFinalized {
         require(minimumRaiseAchieved(), "Minimum raise has to be reached");
         payable(FEE_ADDRESS).transfer(
             address(this).balance.mul(feePercentage).div(100)
@@ -460,12 +444,7 @@ contract FixedSwap is Pausable, Whitelist {
         payable(msg.sender).transfer(address(this).balance);
     }
 
-    function withdrawUnsoldTokens()
-        external
-        onlyOwner
-        isSaleFinalized
-        notLocked
-    {
+    function withdrawUnsoldTokens() external onlyOwner isSaleFinalized {
         require(!unsoldTokensReedemed);
         uint256 unsoldTokens;
         if (hasMinimumRaise() && (cost(tokensAllocated) < cost(minimumRaise))) {
@@ -489,7 +468,6 @@ contract FixedSwap is Pausable, Whitelist {
         external
         onlyOwner
         isSaleFinalized
-        notLocked
     {
         require(
             _tokenAddress != address(erc20),
@@ -503,7 +481,7 @@ contract FixedSwap is Pausable, Whitelist {
     }
 
     /* Safe Pull function */
-    function safePull() external payable onlyOwner whenPaused notLocked {
+    function safePull() external payable onlyOwner whenPaused {
         payable(msg.sender).transfer(address(this).balance);
         erc20.transfer(msg.sender, erc20.balanceOf(address(this)));
     }

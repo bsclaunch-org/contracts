@@ -1,0 +1,3823 @@
+{
+  "version": "3",
+  "log": [
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "590e89db28204b840311ec71d517ebf7c1efbcd3d49681589dfd80513599c209",
+          "withoutMetadata": "57aadc9c22b9e0389c105dd8f3ccc6ec791ab103a70b65932ece2b6efd65aec2",
+          "linkedWithoutMetadata": "57aadc9c22b9e0389c105dd8f3ccc6ec791ab103a70b65932ece2b6efd65aec2"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "console"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/FixedSwap.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/FixedSwap.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/FixedSwap.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/FixedSwap.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/FixedSwap.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/FixedSwap.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/FixedSwap.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/FixedSwap.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/FixedSwap.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/FixedSwap.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/FixedSwap.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/FixedSwap.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1354_storage)",
+              "src": "contracts/FixedSwap.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/FixedSwap.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/FixedSwap.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/FixedSwap.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/FixedSwap.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1354_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1354_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "6666fb6feb5481a26f05507ee6d147c41cc3b794a1efef77a67d26a485d63e09",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/FixedSwap.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/FixedSwap.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/FixedSwap.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "console": {
+        "version": {
+          "withMetadata": "d14b8bbf0223116972bca4244343d16deca2d5e1d16d3bcf0dfbce7d90e61f47",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Token": {
+        "version": {
+          "withMetadata": "dabd255fe88b18f5199fd64ce964e58dfbe64da9b2d7dd8011c9e38f458e7072",
+          "withoutMetadata": "bf601efdfcbd88f32fb8a84d22efc9384ead36695362237707531b51167ccffa",
+          "linkedWithoutMetadata": "bf601efdfcbd88f32fb8a84d22efc9384ead36695362237707531b51167ccffa"
+        },
+        "inherit": [
+          "ERC20",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Token",
+            "src": "contracts/Token.sol:9"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Token",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/Token.sol:6"
+            },
+            {
+              "contract": "Token",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Token.sol:7"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Token": {
+        "version": {
+          "withMetadata": "72af6005210d9d5cfd1fe90ac68223160d263df38a3dbc3a40be2f46b3a22336",
+          "withoutMetadata": "d14192954c78388cdae1b4de3a2ba0a7e6a6375546b670e8f2661bd3b2d1a806",
+          "linkedWithoutMetadata": "d14192954c78388cdae1b4de3a2ba0a7e6a6375546b670e8f2661bd3b2d1a806"
+        },
+        "inherit": [
+          "ERC20",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Token",
+            "src": "contracts/Token.sol:11"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Token",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/Token.sol:6"
+            },
+            {
+              "contract": "Token",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Token.sol:7"
+            },
+            {
+              "contract": "Token",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Token.sol:8"
+            },
+            {
+              "contract": "Token",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Token.sol:9"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "335e681e7e0ec3816d3694b7ab3d92683ca6a786672f642787c46ba9581e9acc",
+          "withoutMetadata": "bdf5fcca537ef261e5dc984c5230b3b4cd032a155d346f3117509e765b623312",
+          "linkedWithoutMetadata": "bdf5fcca537ef261e5dc984c5230b3b4cd032a155d346f3117509e765b623312"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "console"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/FixedSwap.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/FixedSwap.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/FixedSwap.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/FixedSwap.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/FixedSwap.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/FixedSwap.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/FixedSwap.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/FixedSwap.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/FixedSwap.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/FixedSwap.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/FixedSwap.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/FixedSwap.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1354_storage)",
+              "src": "contracts/FixedSwap.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/FixedSwap.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/FixedSwap.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/FixedSwap.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/FixedSwap.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1354_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1354_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "6914f822a490a38f0c0c3805728a2b65c26d431ecdd478c3b49225793581535c",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/FixedSwap.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/FixedSwap.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/FixedSwap.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "console": {
+        "version": {
+          "withMetadata": "d14b8bbf0223116972bca4244343d16deca2d5e1d16d3bcf0dfbce7d90e61f47",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "590e89db28204b840311ec71d517ebf7c1efbcd3d49681589dfd80513599c209",
+          "withoutMetadata": "57aadc9c22b9e0389c105dd8f3ccc6ec791ab103a70b65932ece2b6efd65aec2",
+          "linkedWithoutMetadata": "57aadc9c22b9e0389c105dd8f3ccc6ec791ab103a70b65932ece2b6efd65aec2"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "console"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/FixedSwap.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/FixedSwap.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/FixedSwap.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/FixedSwap.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/FixedSwap.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/FixedSwap.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/FixedSwap.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/FixedSwap.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/FixedSwap.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/FixedSwap.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/FixedSwap.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/FixedSwap.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1354_storage)",
+              "src": "contracts/FixedSwap.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/FixedSwap.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/FixedSwap.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/FixedSwap.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/FixedSwap.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1354_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1354_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "6666fb6feb5481a26f05507ee6d147c41cc3b794a1efef77a67d26a485d63e09",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/FixedSwap.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/FixedSwap.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/FixedSwap.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "console": {
+        "version": {
+          "withMetadata": "d14b8bbf0223116972bca4244343d16deca2d5e1d16d3bcf0dfbce7d90e61f47",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "70f8e0b4ecc58898ccbec50945e43df4e56556422612ff6c3f2484197f8af6e6",
+          "withoutMetadata": "5388a7362f80546b81a4cf2ac0a1e0747a52e163a159499f9b705b9a8d52b04e",
+          "linkedWithoutMetadata": "5388a7362f80546b81a4cf2ac0a1e0747a52e163a159499f9b705b9a8d52b04e"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "console"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/FixedSwap.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/FixedSwap.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/FixedSwap.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/FixedSwap.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/FixedSwap.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/FixedSwap.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/FixedSwap.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/FixedSwap.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/FixedSwap.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/FixedSwap.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/FixedSwap.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/FixedSwap.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1354_storage)",
+              "src": "contracts/FixedSwap.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/FixedSwap.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/FixedSwap.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/FixedSwap.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/FixedSwap.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1354_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1354_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "283a6dfda95ea0dc3420a080d5263421f6391c59c4111ed8013280903abea1e7",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/FixedSwap.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/FixedSwap.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/FixedSwap.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "console": {
+        "version": {
+          "withMetadata": "d14b8bbf0223116972bca4244343d16deca2d5e1d16d3bcf0dfbce7d90e61f47",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "1656a068dba00362c870f5ef56bb344ca8bfef1cb563ee89d564539813980124",
+          "withoutMetadata": "145b0e40e4aa6743b9556e25111c9eb39fea8e31c0153819ce0b20717d59f097",
+          "linkedWithoutMetadata": "145b0e40e4aa6743b9556e25111c9eb39fea8e31c0153819ce0b20717d59f097"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/FixedSwap.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/FixedSwap.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/FixedSwap.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/FixedSwap.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/FixedSwap.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/FixedSwap.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/FixedSwap.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/FixedSwap.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/FixedSwap.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/FixedSwap.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/FixedSwap.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/FixedSwap.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1353_storage)",
+              "src": "contracts/FixedSwap.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/FixedSwap.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/FixedSwap.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/FixedSwap.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/FixedSwap.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/FixedSwap.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1353_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1353_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "44fb61ddc4b0150f1326e32ef4ae905b9d0319eb50b36bc63d73663a57f2c23e",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/FixedSwap.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/FixedSwap.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/FixedSwap.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/FixedSwap.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/FixedSwap.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "5ac6b4450cbe162e70c9456ecab7366f6425e7078a132349bdaa0aa9c4de55f8",
+          "withoutMetadata": "145b0e40e4aa6743b9556e25111c9eb39fea8e31c0153819ce0b20717d59f097",
+          "linkedWithoutMetadata": "145b0e40e4aa6743b9556e25111c9eb39fea8e31c0153819ce0b20717d59f097"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/IDO.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/IDO.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/IDO.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/IDO.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/IDO.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/IDO.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/IDO.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/IDO.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/IDO.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/IDO.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/IDO.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/IDO.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1353_storage)",
+              "src": "contracts/IDO.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/IDO.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/IDO.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/IDO.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/IDO.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/IDO.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1353_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1353_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "324079d5a3223fd320fa7869bc2be6ea148ce2a6820bf257453aa5886e5f4b28",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/IDO.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/IDO.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/IDO.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/IDO.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:26"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Pausable": {
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Pausable",
+            "src": "@openzeppelin/contracts/security/Pausable.sol:32"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Pausable",
+              "label": "_paused",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts/security/Pausable.sol:27"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "version": {
+          "withMetadata": "3d7ad603eb653c696055776ba685b1767b3e803607f5592e028a192e00cbb99b",
+          "withoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e",
+          "linkedWithoutMetadata": "d7e8ed31e1333933452bbf73abd671ff44f6a9ace577cf7d65f3e4e2e520437e"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:51"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:33"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:40"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "version": {
+          "withMetadata": "2fb814bd33676ea110a3f9f8e429d042d7343e69a1fc86e0d47c51e92fd45fcb",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "FixedSwap": {
+        "version": {
+          "withMetadata": "eaf78fe278bf599de12857e0ccb2d53b9e3375527487f72e8eb8a260d4285306",
+          "withoutMetadata": "145b0e40e4aa6743b9556e25111c9eb39fea8e31c0153819ce0b20717d59f097",
+          "linkedWithoutMetadata": "145b0e40e4aa6743b9556e25111c9eb39fea8e31c0153819ce0b20717d59f097"
+        },
+        "inherit": [
+          "Whitelist",
+          "Ownable",
+          "Pausable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "FixedSwap",
+            "src": "contracts/IDO.sol:96"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "increment",
+            "src": "contracts/IDO.sol:58"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "isSaleFunded",
+            "src": "contracts/IDO.sol:66"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "decimals",
+            "src": "contracts/IDO.sol:67"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "unsoldTokensReedemed",
+            "src": "contracts/IDO.sol:68"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMinimumAmount",
+            "src": "contracts/IDO.sol:72"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "individualMaximumAmount",
+            "src": "contracts/IDO.sol:73"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "minimumRaise",
+            "src": "contracts/IDO.sol:74"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensAllocated",
+            "src": "contracts/IDO.sol:75"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "tokensForSale",
+            "src": "contracts/IDO.sol:76"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "FEE_ADDRESS",
+            "src": "contracts/IDO.sol:78"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "feePercentage",
+            "src": "contracts/IDO.sol:79"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "FixedSwap",
+              "label": "increment",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:58"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchases",
+              "type": "t_mapping(t_uint256,t_struct(Purchase)1353_storage)",
+              "src": "contracts/IDO.sol:60"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "buyers",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/IDO.sol:61"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "purchaseIds",
+              "type": "t_array(t_uint256)dyn_storage",
+              "src": "contracts/IDO.sol:62"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "myPurchases",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "src": "contracts/IDO.sol:63"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "erc20",
+              "type": "t_contract(ERC20)702",
+              "src": "contracts/IDO.sol:65"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isSaleFunded",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:66"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "decimals",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:67"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "unsoldTokensReedemed",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:68"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tradeValue",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:69"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "startDate",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:70"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "endDate",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:71"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMinimumAmount",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:72"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "individualMaximumAmount",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:73"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "minimumRaise",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:74"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensAllocated",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:75"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "tokensForSale",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:76"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "isTokenSwapAtomic",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:77"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "FEE_ADDRESS",
+              "type": "t_address",
+              "src": "contracts/IDO.sol:78"
+            },
+            {
+              "contract": "FixedSwap",
+              "label": "feePercentage",
+              "type": "t_uint256",
+              "src": "contracts/IDO.sol:79"
+            }
+          ],
+          "types": {
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_struct(Purchase)1353_storage)": {
+              "label": "mapping(uint256 => struct FixedSwap.Purchase)"
+            },
+            "t_struct(Purchase)1353_storage": {
+              "label": "struct FixedSwap.Purchase",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "purchaser",
+                  "type": "t_address"
+                },
+                {
+                  "label": "ethAmount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "wasFinalized",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "reverted",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])"
+            },
+            "t_contract(ERC20)702": {
+              "label": "contract ERC20"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Whitelist": {
+        "version": {
+          "withMetadata": "a073eb4e1638e4406e0d4eb10db31f2874ce23db651f432f9163907553d8e56d",
+          "withoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0",
+          "linkedWithoutMetadata": "a3f9ff1e9382427cae96c9dc063a5c25d5a7ea482689bcd32eff0033e5d4eae0"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Whitelist",
+            "src": "contracts/IDO.sol:27"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "hasWhitelisting",
+            "src": "contracts/IDO.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Whitelist",
+              "label": "whitelist",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/IDO.sol:13"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "whitelistedAddresses",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/IDO.sol:14"
+            },
+            {
+              "contract": "Whitelist",
+              "label": "hasWhitelisting",
+              "type": "t_bool",
+              "src": "contracts/IDO.sol:15"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    }
+  ]
+}
